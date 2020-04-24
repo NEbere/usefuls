@@ -1,0 +1,52 @@
+database locking mechanisms for SQL and no SQL as it realtes to concurrency
+in distributed systems
+------------------------
+
+One of the important aspects of distributed systems is achieveing concurrent transparency.
+Concurrent transparency is when a distributed system is able to achive concurrent execution of 
+requests with shared resources without users knowledge.
+
+For instance, users editing a record in the same DB table at the same time.
+Aside from users not knowing others are using or making change to the same resource
+same time as they are, another important thing is that the resource needs to be 
+in a consistent state after the processes are complete by the independent users.
+
+One of the ways to achieve this consistency can be through locking mechanisms, in which users are given 
+exclusive access in turn to the resource in question.
+
+this post talks about how locking works with SQL and NoSQL databases, and specifically,
+MySQL and MongoDB.
+
+While some of the features mentioned here are peculiar to the DBMS (database management system) mentioned, 
+many are shared acrossed other SQL and NoSQL systems.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Next post: Comparisons between database engines (https://en.wikipedia.org/wiki/Database_engine)

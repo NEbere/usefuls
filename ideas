@@ -1,0 +1,90 @@
+Write:
+- Sequelize cookbook
+- A small book on code reviews
+
+
+
+
+
+
+How to check cloudwatch logs for errors on lambda
+
+- go to AWS console
+- under services, select 'Lambda'
+- search for and select the desired function name on the list of available functions
+- on the function page, select the 'Monitoring' tab
+- on the 'Monitoring' tab, click on 'view logs in Cloudwatch'
+- on the cloudwatch page that you will be redirected to from the lambda page,
+select a log group, targeting the time when the error was encountered.
+NB: take note of the time zones, between when you received the error and the time of thenlocation 
+you are accessing/running AWS from  and convert accordingly so you know what time to target for the search
+
+- After selecting the time frame from the previous step, you land on the log group page.
+Here you can search for a desired metirc. This can be a AWS lambda metric or custom metric logged by your code.
+In this post, we will search for a custom metric 'filtered'
+
+- A search for error will show you the errors that happened during the time of interest selected.
+- any of these metrics can be searched for:
+https://docs.aws.amazon.com/lambda/latest/dg/monitoring-functions-metrics.html
+
+Also, custom metrics can be searched for
+
+
+
+connect to AWS MySQL
+https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_ConnectToInstance.html
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Learnings:
+
+- when running a script that prints to console or has an output stament
+you can use the command '> <random_file_name>' while running the script
+ to print that output to the random_file_name
+
+example:
+node syncLastActive.js > qwe2.out
+
+will save the outputs of console to qwe2.out file. it will creat new one
+if it doesnt exist and update an exising one.
+
+
+- To read the inputs that will be sent to the file from above (qwe2.out)
+as they are been written, you can use the command:
+
+tail -f qwe2.out
+
+This will display what is written to that file on the screen as
+they are been written
+
+
+
+
+Useful questions:
+When someone brings up an hypothesis about something, and a fix or experiment,
+ask how they intend to test out the results of this implementation against that hypothesis
+Eg: How do you know implementing this feature will change A or B, and how 
+will you measure the implementation of this feature, specifically.
+
